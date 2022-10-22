@@ -1332,8 +1332,8 @@ function Forums.new(newName)
                     local mouse = game:GetService("Players").LocalPlayer:GetMouse()
                     local ms = mouse
                     btn.MouseButton1Click:Connect(function()
-                        for i,v in pairs(players:GetChildren()) do
-                            if btn.Name == v.Name then
+                        for i,v2 in pairs(players:GetChildren()) do
+                            if btn.Name == v2.Name then
                                 dropInf.Text = "Teleported to: "..v
                             end
                         end
