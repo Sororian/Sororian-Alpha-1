@@ -7,6 +7,7 @@ local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
 local input = game:GetService("UserInputService")
 local run = game:GetService("RunService")
+local players = game:GetService("Players")
 
 function Forums:DraggingEnabled(frame, parent)
         
@@ -1331,7 +1332,11 @@ function Forums.new(newName)
                     local mouse = game:GetService("Players").LocalPlayer:GetMouse()
                     local ms = mouse
                     btn.MouseButton1Click:Connect(function()
-                        dropInf.Text = "Teleported to: "..v
+                        for i,v in pairs(players:GetChildren()) do
+                            if btn.Name == v.Name then
+                                dropInf.Text = "Teleported to: "..v
+                            end
+                        end
                         callback(v)
                         game.TweenService:Create(dropFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
                             Size = UDim2.new(0,474,0,32)
