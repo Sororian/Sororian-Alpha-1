@@ -1237,7 +1237,7 @@ function Forums.new(newName)
                 local btn = dropOption
                 local sample = Sample_2
                 btn.MouseButton1Click:Connect(function()
-                    dropInf.Text = "Teleported to: "..v
+                    dropInf.Text = v
                     callback(v)
                     game.TweenService:Create(dropFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
                         Size = UDim2.new(0,474,0,32)
@@ -1331,7 +1331,7 @@ function Forums.new(newName)
                     local mouse = game:GetService("Players").LocalPlayer:GetMouse()
                     local ms = mouse
                     btn.MouseButton1Click:Connect(function()
-                        dropInf.Text = v
+                        dropInf.Text = "Teleported to: "..v
                         callback(v)
                         game.TweenService:Create(dropFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
                             Size = UDim2.new(0,474,0,32)
