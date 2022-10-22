@@ -1150,7 +1150,7 @@ function Forums.new(newName)
             dropInf.Size = UDim2.new(0, 81, 0, 18)
             dropInf.ZIndex = 5
             dropInf.Font = Enum.Font.Gotham
-            dropInf.Text = "Teleport to player"
+            dropInf.Text = title
             dropInf.TextColor3 = Color3.fromRGB(255, 255, 255)
             dropInf.TextSize = 14.000
             dropInf.TextXAlignment = Enum.TextXAlignment.Left
@@ -1220,7 +1220,7 @@ function Forums.new(newName)
                 btnText.Size = UDim2.new(0, 175, 0, 18)
                 btnText.ZIndex = 5
                 btnText.Font = Enum.Font.Gotham
-                btnText.Text = "Teleported to: "..v
+                btnText.Text = v
                 btnText.TextColor3 = Color3.fromRGB(255, 255, 255)
                 btnText.TextSize = 14.000
                 btnText.TextXAlignment = Enum.TextXAlignment.Left
@@ -1237,7 +1237,7 @@ function Forums.new(newName)
                 local btn = dropOption
                 local sample = Sample_2
                 btn.MouseButton1Click:Connect(function()
-                    dropInf.Text = v
+                    dropInf.Text = "Teleported to: "..v
                     callback(v)
                     game.TweenService:Create(dropFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
                         Size = UDim2.new(0,474,0,32)
